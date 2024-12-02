@@ -2,11 +2,7 @@
 const grid = document.querySelector(".grid");
 const form = document.querySelector("form");
 
-
-
-const btn = document.querySelector("button").addEventListener("click", (event) => {
-    event.preventDefault();
-    let size = parseInt(document.querySelector("#size").value);
+function printGrid (size) {
     for (let i = 0; i < size; i++) {
         for (let j = 0; j < size; j++) {
          const smallDiv = document.createElement("div");
@@ -19,6 +15,13 @@ const btn = document.querySelector("button").addEventListener("click", (event) =
         }
      
      }
+}
+
+const btn = document.querySelector("button").addEventListener("click", (event) => {
+    event.preventDefault();
+    let size = parseInt(document.querySelector("#size").value);
+    printGrid(size);
+    
 });
 
 
