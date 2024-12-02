@@ -1,7 +1,11 @@
 
 const grid = document.querySelector(".grid");
-const size = parseInt(document.querySelector("form").value);
-console.log(size);
+const form = document.querySelector("form");
+const btn = document.querySelector("button").addEventListener("click", (event) => {
+    event.preventDefault();
+    let size = parseInt(document.querySelector("#size").value);
+    console.log(size);
+});
 
 
 
