@@ -3,6 +3,7 @@ const grid = document.querySelector(".grid");
 const form = document.querySelector("form");
 
 function printGrid (size) {
+
     for (let i = 0; i < size; i++) {
         for (let j = 0; j < size; j++) {
          const smallDiv = document.createElement("div");
@@ -17,11 +18,18 @@ function printGrid (size) {
      }
 }
 
+
 const btn = document.querySelector("button").addEventListener("click", (event) => {
     event.preventDefault();
     let size = parseInt(document.querySelector("#size").value);
     printGrid(size);
-    
+    const replay = document.createElement("button");
+    replay.textContent = "Replay";
+    replay.style.marginTop = "16px";
+    form.appendChild(replay);
+    replay.addEventListener("click", () => {
+        location.reload();
+    })
 });
 
 
