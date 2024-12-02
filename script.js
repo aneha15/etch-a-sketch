@@ -1,5 +1,9 @@
 
 const grid = document.querySelector(".grid");
+const size = parseInt(document.querySelector("form").value);
+console.log(size);
+
+
 
 for (let i = 0; i < 16; i++) {
    for (let j = 0; j < 16; j++) {
@@ -9,7 +13,8 @@ for (let i = 0; i < 16; i++) {
        smallDiv.addEventListener("mouseenter", () => {
         smallDiv.style.backgroundColor = "lightpink";
        });
-    }
+   }
+
 }
 
 

@@ -2,6 +2,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .container {
@@ -18,4 +19,11 @@ body {
     height: 640px;
     width: 640px;
     border: 1px solid gray;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    font-size: 25px;
+    font-weight: 500;
 }
