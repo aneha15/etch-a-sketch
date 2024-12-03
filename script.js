@@ -2,8 +2,14 @@
 const grid = document.querySelector(".grid");
 const form = document.querySelector("form");
 const replay = document.createElement("button");
+const input = document.querySelector("input");
+input.style.height = "30px";
+const button = document.querySelector("button");
+button.style.height = "26px";
+button.style.fontSize = "18px";
 replay.textContent = "Replay";
 replay.style.marginTop = "16px";
+
 
 function printGrid (size) {
 
@@ -14,7 +20,7 @@ function printGrid (size) {
             smallDiv.style.height = smallDiv.style.width = `${640/size}px`;
             grid.appendChild(smallDiv);
             smallDiv.addEventListener("mouseenter", () => {
-             smallDiv.style.backgroundColor = "turquoise";
+             smallDiv.style.backgroundColor = colorPicker(smallDiv);
             })
         }
      
@@ -30,7 +36,12 @@ function reset () {
 }
 
 function colorPicker (elem) {
-    elem.style.backgroundColor = `rgb`
+    const x = Math.floor(Math.random() * 256);
+    const y = Math.floor(Math.random() * 256);
+    const z = Math.floor(Math.random() * 256);
+
+    elem.style.backgroundColor = `rgb(${x} , ${y}, ${z})`;
+
  }
 
 
