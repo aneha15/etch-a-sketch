@@ -36,11 +36,11 @@ function reset () {
 }
 
 function colorPicker (elem) {
-    const x = Math.floor(Math.random() * 256);
-    const y = Math.floor(Math.random() * 256);
-    const z = Math.floor(Math.random() * 256);
+    color = "hsl(" + 360 * Math.random() + ',' +
+    (30 + 70 * Math.random()) + '%,' + 
+    (60 + 10 * Math.random()) + '%)'
 
-    elem.style.backgroundColor = `rgb(${x} , ${y}, ${z})`;
+    elem.style.backgroundColor = color;
 
  }
 
